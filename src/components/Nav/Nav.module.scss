@@ -1,0 +1,63 @@
+nav {
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 1.2rem;
+		flex-wrap: wrap;
+		position: relative;
+
+		.logo {
+			width: 120px;
+			img {
+				width: 100%;
+			}
+		}
+
+		.navList {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 16px;
+			background: #333;
+			overflow: hidden;
+			width: 100%;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			height: 0;
+			transition: all 0.5s ease-in-out;
+
+			&.open {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 16px;
+				margin-top: -30px;
+				padding: 1.6rem 0;
+				height: 100px;
+				border-radius: 5px;
+			}
+
+			li {
+				color: #fff;
+
+				a {
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+		}
+
+		.menuToggle {
+			background: transparent;
+			border: none;
+			color: #fff;
+
+			svg {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+}

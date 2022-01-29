@@ -1,0 +1,36 @@
+.footer {
+	background: linear-gradient(180deg, #000 50%, #b30f17);
+	padding: 4rem 0 8rem;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.logo {
+			width: 124px;
+		}
+
+		.navContainer {
+			.navList {
+				color: #fff;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+				font-size: 1.4rem;
+
+				li {
+					text-align: center;
+
+					a {
+						text-decoration: none;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
