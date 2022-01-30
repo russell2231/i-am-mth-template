@@ -1,0 +1,37 @@
+.layout {
+	.header {
+		padding: 2.4rem 0;
+		box-shadow: 0px 2px 11px 0px rgba(#000, 0.1);
+		background: #fff;
+
+		.container {
+			padding: 0 2.4rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.logo {
+				img {
+					width: 80px;
+				}
+			}
+
+			.signIn {
+				display: none;
+			}
+
+			.navToggle {
+				width: 33px;
+				height: 33px;
+				padding: 0;
+				border: none;
+				background: transparent;
+
+				svg {
+					width: 33px;
+					height: 33px;
+				}
+			}
+		}
+	}
+}

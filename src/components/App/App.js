@@ -1,15 +1,16 @@
+import { Routes, Route } from 'react-router-dom';
 import Home from '../Home/Home';
-import { Route, Routes } from 'react-router-dom';
-
-import styles from './App.module.scss';
+import Layout from '../Layout/Layout';
 
 function App() {
 	return (
-		<div className={styles.wrapper}>
+		<>
 			<Routes>
-				<Route index path='/' element={<Home />} />
+				<Route path='/' element={<Layout />}>
+					<Route index element={<Home />} />
+				</Route>
 			</Routes>
-		</div>
+		</>
 	);
 }
 
