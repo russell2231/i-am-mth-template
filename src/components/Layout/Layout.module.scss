@@ -10,6 +10,10 @@
 			justify-content: space-between;
 			align-items: center;
 
+			@media screen and (min-width: 768px) {
+				padding: 0 4rem;
+			}
+
 			.logo {
 				img {
 					width: 80px;
