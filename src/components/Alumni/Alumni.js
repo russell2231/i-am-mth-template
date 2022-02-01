@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 import styles from './Alumni.module.scss';
 import profileImg from '../../assets/Mount Healthy-logos.jpeg';
@@ -29,7 +29,7 @@ const Alumni = () => {
 						<p className={styles.alumCollege}>University of Akron</p>
 						<p className={styles.alumJob}>Front End Web Developer</p>
 						<p className={styles.alumClass}>Class of 2014</p>
-						<Link className={styles.btn} to='alumni/$name'>
+						<Link className={styles.btn} to='profile'>
 							View Profile
 						</Link>
 					</div>
@@ -39,7 +39,7 @@ const Alumni = () => {
 						<p className={styles.alumCollege}>University of Akron</p>
 						<p className={styles.alumJob}>Front End Web Developer</p>
 						<p className={styles.alumClass}>Class of 2014</p>
-						<Link className={styles.btn} to='alumni/$name'>
+						<Link className={styles.btn} to='profile'>
 							View Profile
 						</Link>
 					</div>
@@ -49,7 +49,7 @@ const Alumni = () => {
 						<p className={styles.alumCollege}>University of Akron</p>
 						<p className={styles.alumJob}>Front End Web Developer</p>
 						<p className={styles.alumClass}>Class of 2014</p>
-						<Link className={styles.btn} to='alumni/$name'>
+						<Link className={styles.btn} to='profile'>
 							View Profile
 						</Link>
 					</div>
@@ -59,12 +59,13 @@ const Alumni = () => {
 						<p className={styles.alumCollege}>University of Akron</p>
 						<p className={styles.alumJob}>Front End Web Developer</p>
 						<p className={styles.alumClass}>Class of 2014</p>
-						<Link className={styles.btn} to='alumni/$name'>
+						<Link className={styles.btn} to='profile'>
 							View Profile
 						</Link>
 					</div>
 				</div>
 			</div>
+			<Outlet />
 		</main>
 	);
 };
