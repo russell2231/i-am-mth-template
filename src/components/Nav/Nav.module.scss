@@ -11,8 +11,19 @@
 	right: 0;
 	z-index: 99;
 
+	@media screen and (min-width: 1024px) {
+		padding: 2.4rem;
+		border-radius: 0 0 10px 0;
+		box-shadow: 5px 5px 15px 5px rgba(#000, 0.3);
+		height: 100%;
+		overflow: auto;
+		position: relative;
+		left: unset;
+		right: unset;
+	}
+
 	&.open {
-		height: 134px;
+		height: 172px;
 		padding: 2.4rem;
 	}
 
@@ -25,6 +36,11 @@
 		align-items: center;
 		gap: 1.6rem;
 
+		@media screen and (min-width: 1024px) {
+			align-items: start;
+			gap: 3.6rem;
+		}
+
 		.navItem {
 			a {
 				color: #fff;
@@ -35,6 +51,12 @@
 
 				.itemIcon {
 					margin-right: 5px;
+				}
+			}
+
+			&.signInItem {
+				@media screen and (min-width: 1024px) {
+					display: none;
 				}
 			}
 		}

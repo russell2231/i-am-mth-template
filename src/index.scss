@@ -14,4 +14,8 @@ body {
 	padding: 0;
 	font-size: 1.5rem;
 	background: #cdd0ce;
+
+	@media screen and (min-width: 1024px) {
+		overflow: hidden;
+	}
 }

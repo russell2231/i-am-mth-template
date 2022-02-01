@@ -1,7 +1,7 @@
-import { Link, Outlet } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 
 import styles from './Layout.module.scss';
-import { useState } from 'react';
 
 import logo from '../../assets/logo.png';
 import { FiMenu } from 'react-icons/fi';
@@ -9,6 +9,13 @@ import Nav from '../Nav/Nav';
 
 const Layout = () => {
 	const [isNavOpen, setIsNavOpen] = useState(false);
+	const [isMobile, setIsMobile] = useState(true);
+	const location = useLocation();
+
+	useEffect(() => {
+		setIsNavOpen(false);
+		window.scrollTo(0, 0);
+	}, [location]);
 
 	const toggleNav = () => {
 		setIsNavOpen(!isNavOpen);
@@ -27,8 +34,8 @@ const Layout = () => {
 					</button>
 				</div>
 			</header>
-			<Nav isNavOpen={isNavOpen} />
-			<Outlet />
+			<Nav isNavOpen={isNavOpen} className={styles.navLayout} />
+			<Outlet className={styles.body} />
 		</div>
 	);
 };

@@ -1,8 +1,25 @@
 .layout {
+	@media screen and (min-width: 1024px) {
+		display: grid;
+		grid-template-rows: auto auto auto;
+		grid-template-columns: auto auto;
+		grid-template-areas:
+			'head head'
+			'nav page'
+			'nav page';
+		height: 100vh;
+		width: 100vw;
+		overflow: hidden;
+	}
+	@media screen and (min-width: 1440px) {
+		grid-template-columns: 1fr 6fr;
+	}
+
 	.header {
 		padding: 2.4rem 0;
 		box-shadow: 0px 2px 11px 0px rgba(#000, 0.1);
 		background: #fff;
+		grid-area: head;
 
 		.container {
 			padding: 0 2.4rem;
@@ -15,6 +32,8 @@
 			}
 
 			.logo {
+				cursor: pointer;
+
 				img {
 					width: 80px;
 				}
@@ -22,6 +41,18 @@
 
 			.signIn {
 				display: none;
+				background: #af0e29;
+				color: #fff;
+				border: none;
+				text-decoration: none;
+				padding: 1.2rem 2.4rem;
+				border-radius: 10px;
+				box-shadow: 0px 2px 11px 0px rgba(#000, 0.3);
+				cursor: pointer;
+
+				@media screen and (min-width: 1024px) {
+					display: inline-block;
+				}
 			}
 
 			.navToggle {
@@ -31,11 +62,19 @@
 				border: none;
 				background: transparent;
 
+				@media screen and (min-width: 1024px) {
+					display: none;
+				}
+
 				svg {
 					width: 33px;
 					height: 33px;
 				}
 			}
 		}
+	}
+
+	.navLayout {
+		grid-area: nav;
 	}
 }

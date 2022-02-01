@@ -4,6 +4,10 @@
 	@media screen and (min-width: 768px) {
 		padding: 6.4rem 0;
 	}
+	@media screen and (min-width: 1024px) {
+		grid-area: page;
+		overflow-y: scroll;
+	}
 
 	.container {
 		padding: 0 2.4rem;
@@ -28,8 +32,11 @@
 				font-size: 3.6rem;
 
 				@media screen and (min-width: 768px) {
-					font-size: 5.6rem;
+					font-size: 3.6rem;
 					margin-bottom: 1.2rem;
+				}
+				@media screen and (min-width: 1024px) {
+					font-size: 3.6rem;
 				}
 			}
 
@@ -37,7 +44,10 @@
 				margin-top: 0;
 
 				@media screen and (min-width: 768px) {
-					font-size: 3rem;
+					font-size: 1.6rem;
+				}
+				@media screen and (min-width: 1024px) {
+					font-size: 1.6rem;
 				}
 			}
 		}
@@ -78,6 +88,9 @@
 			@media screen and (min-width: 768px) {
 				width: 100%;
 				grid-template-columns: 1fr 1fr;
+			}
+			@media screen and (min-width: 1024px) {
+				grid-template-columns: 1fr 1fr 1fr;
 			}
 
 			.alum {

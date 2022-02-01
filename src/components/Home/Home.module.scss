@@ -1,4 +1,9 @@
 .home {
+	@media screen and (min-width: 1024px) {
+		grid-area: page;
+		overflow-y: scroll;
+	}
+
 	.hero {
 		background: linear-gradient(rgba(#000, 0.3), rgba(#000, 0.8)),
 			url(../../assets/background.jpeg) no-repeat center/cover;
